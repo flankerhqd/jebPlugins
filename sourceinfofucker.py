@@ -40,6 +40,6 @@ class sourceinfofucker(IScript):
                     self.instance.renameClass(origin, k)
             self.instance.print("renaming done")
 
-        self.instance.getUI().getView(View.Type.JAVA).refresh()
-        self.instance.getUI().getView(View.Type.ASSEMBLY).refresh()
-        self.instance.getUI().getView(View.Type.CLASS_HIERARCHY).refresh()
+            self.instance.getUI().getView(View.Type.JAVA).refresh()
+            self.instance.getUI().getView(View.Type.ASSEMBLY).refresh()
+            self.instance.getUI().getView(View.Type.CLASS_HIERARCHY).refresh()
