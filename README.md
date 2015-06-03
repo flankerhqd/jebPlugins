@@ -1,7 +1,15 @@
 # jebPlugins
 Various Jeb plugins, including obfuscation restore 
 
-Current included: Source Info Restorer
+Current included: Source Info Restorer. Restore class name from proguarded output.
+Example:
+
+```
+.class public a
+.super VolleyError
+.source "TimeoutError.java"
+```
+can be used to restore *a* to its origin name *TimeoutError*
 
 To be added: De-obfuscator
 
