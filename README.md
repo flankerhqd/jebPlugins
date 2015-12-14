@@ -1,7 +1,12 @@
 # jebPlugins
 Various Jeb plugins, including obfuscation restore 
+##Note: JEB1 has changed a lot since writing, not applicable to new versions of JEB.
+Current included: 
 
-Current included: Source Info Restorer. Restore class name from proguarded output.
+Source Info Restorer. Restore class name from proguarded output.
+
+Deobfuscator. Restore field names from toString method and call statement with string arguments
+
 Example:
 
 ```
@@ -11,7 +16,6 @@ Example:
 ```
 can be used to restore *a* to its origin name *TimeoutError*
 
-To be added: De-obfuscator
 
 ## License
 
