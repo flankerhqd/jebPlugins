@@ -17,6 +17,12 @@ class sourceinfofucker(IScript):
         #ignore invalid source, i.e. "proguard" and other self-defined string
         for i in self.dex.getClassSignatures(True):
             cls = self.dex.getClass(i)
+            if i.startswith(u"com/a/a/a/a"):
+            	print origin
+            if cls == None:
+            	self.instance.print("error in resolving " + i + " skipping")
+            	#oops, wtf
+            	continue
             sourceIdx = cls.getSourceIndex()
             if sourceIdx != -1:
                 source = self.dex.getString(sourceIdx)
@@ -36,7 +42,11 @@ class sourceinfofucker(IScript):
             for k, v in pool.iteritems():
                 for origin in v:
                     #notice some inner class may share same Source Info
-                    self.instance.print("renaming from %s to %s" % (origin,k))
+                    if origin.find(u"$") != -1:
+                    	#this is a inner class, proceed with caution
+                    	k = k + "$" + origin.split('$')[1]
+                    if origin.startswith(u"Lcom/a/a/a/a"):
+                    	self.instance.print("renaming from %s to %s" % (origin,k))
                     self.instance.renameClass(origin, k)
             self.instance.print("renaming done")
 
