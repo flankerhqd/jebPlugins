@@ -1,5 +1,6 @@
 # jebPlugins
 Various Jeb plugins, including obfuscation restore 
+Tested on newest JEB1 20150810
 ##Note: JEB2 has changed a lot in the API, not applicable to JEB2.
 Current included: 
 
