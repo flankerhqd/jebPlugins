@@ -1,6 +1,6 @@
 # jebPlugins
 Various Jeb plugins, including obfuscation restore 
-##Note: JEB1 has changed a lot since writing, not applicable to new versions of JEB.
+##Note: JEB2 has changed a lot in the API, not applicable to JEB2.
 Current included: 
 
 Source Info Restorer. Restore class name from proguarded output.
